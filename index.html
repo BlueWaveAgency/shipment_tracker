@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueWave Maritime Shipping Agency</title>
+    <style>
+        body {
+            background-color: lightseagreen;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: white;
+        }
+        input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BlueWave Maritime Shipping Agency</h1>
+        <h2>Enter your tracking number</h2>
+        <input type="text" id="trackingNumber" placeholder="Enter tracking number">
+        <br>
+        <button onclick="trackShipment()">Track</button>
+    </div>
+
+    <script>
+        function trackShipment() {
+            const trackingNumber = document.getElementById("trackingNumber").value;
+
+            if (trackingNumber === "IVANADDYHHRZDGHBIG") {
+                // Redirect to tracking page
+                window.location.href = "tracking.html";
+            } else {
+                alert("Invalid tracking number. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
